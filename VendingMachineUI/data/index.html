@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECE Lab Vending Machine</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to ECE Lab Vending Machine</h1>
+        
+        <!-- Choose Action Section -->
+        <div id="choose-action-section">
+            <button onclick="showSection('get-items-section')">Get Items</button>
+            <button onclick="showSection('submit-items-section')">Submit Items</button>
+        </div>
+        
+        <!-- Get Items Section -->
+        <div id="get-items-section" style="display:none;">
+            <button onclick="showSection('choose-action-section')">Back</button>
+            <h2>Get Items</h2>
+            <div class="item">
+                <span>Arduino Uno</span>
+                <input type="number" id="Arduino-Uno-quantity" min="0" max="2" value="0">
+            </div>
+            <div class="item">
+                <span>NodeMCU- esp32</span>
+                <input type="number" id="NodeMCU-esp32-quantity" min="0" max="2" value="0">
+            </div>
+            <div class="item">
+                <span>Arduino nano</span>
+                <input type="number" id="Arduino-nano-quantity" min="0" max="2" value="0">
+            </div>
+            <div class="item">
+                <span>Servo Motor</span>
+                <input type="number" id="servo-motor-quantity" min="0" max="2" value="0">
+            </div>
+            <div class="item">
+                <span>DC motor</span>
+                <input type="number" id="DC-motor-quantity" min="0" max="2" value="0">
+            </div>
+            <div class="item">
+                <span>Bluetooth module</span>
+                <input type="number" id="Bluetooth-module-quantity" min="0" max="2" value="0">
+            </div>
+            <div class="item">
+                <span>Motor driver(L293D)</span>
+                <input type="number" id="Motor-driver(L293D)-quantity" min="0" max="2" value="0">
+            </div>
+            <div class="item">
+                <span>Mini breadboard</span>
+                <input type="number" id="Mini-breadboard-quantity" min="0" max="2" value="0">
+            </div>
+            <div class="item">
+                <span>Ultrasonic sensors</span>
+                <input type="number" id="Ultrasonic-sensors-quantity" min="0" max="2" value="0">
+            </div>
+            <div class="item">
+                <span>LCD screen</span>
+                <input type="number" id="LCD-screen-quantity" min="0" max="2" value="0">
+            </div>
+            <div class="item">
+                <span>Raspberry pi </span>
+                <input type="number" id="Raspberry-pi-quantity" min="0" max="2" value="0">
+            </div>
+            <div class="item">
+                <span>IR module</span>
+                <input type="number" id="IR-module-quantity" min="0" max="2" value="0">
+            </div>
+
+            <button onclick="addToCart()">Add to Cart</button>
+            <button onclick="showCart()">View Cart</button>
+        </div>
+        
+        <!-- Submit Items Section -->
+        <div id="submit-items-section" style="display:none;">
+            <button onclick="showSection('choose-action-section')">Back</button>
+            <h2>Submit Items</h2>
+            <label for="unique-code-input">Enter Unique Code:</label>
+            <input type="text" id="unique-code-input" placeholder="Unique Code">
+            <button onclick="handleUniqueCode()">Submit</button>
+        </div>
+        
+        <!-- Submission Info Section -->
+        <div id="submission-info-section" style="display:none;">
+            <button onclick="showSection('choose-action-section')">Back</button>
+            <h2>Submission Info</h2>
+            <p id="issued-items-info"></p>
+            <div id="issued-items"></div>
+        </div>
+        
+        <!-- Cart Section -->
+        <div id="cart-section" style="display:none;">
+            <button onclick="showSection('get-items-section')">Back</button>
+            <h2>Cart</h2>
+            <p id="user-info-cart"></p>
+            <div id="cart-items"></div>
+            <button onclick="confirmSelection()">Confirm Selection</button>
+            <button onclick="orderItems()">Order Items</button>
+        </div>
+
+        <!-- Order History Section -->
+        <div id="order-history-section" style="display:none;">
+            <button onclick="showSection('choose-action-section')">Back</button>
+            <h2>Order History</h2>
+            <div id="order-history-info"></div>
+        </div>
+    </div>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: url('images/ECE_logo_header_new.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #23eaf8;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.item, .cart-item, .submission-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.item span, .cart-item span, .submission-item span {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.item input, .cart-item input, .submission-item input {
+    width: 80px;
+    text-align: center;
+    font-size: 1em;
+}
+
+button {
+    margin: 10px;
+    padding: 15px 30px;
+    background-color: #e625c6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: #e625c6;
+}
+
+button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+input, label {
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+#choose-action-section,
+#issue-items-section,
+#submit-items-section,
+#get-items-section,
+#login-section,
+#cart-section,
+#order-history-section,
+#submission-info {
+    width: 100%;
+}
+
+#user-info-top, #user-info-cart, #order-history-info, #issued-items-info {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#cart-items, #issued-items {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+#cart-items div, #issued-items div {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-items div button, #issued-items div button {
+    margin-left: 10px;
+}
